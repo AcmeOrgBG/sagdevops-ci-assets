@@ -25,18 +25,6 @@ Edit the _System.properties_ to correspond to your inftrastucture - deployerHost
 *Notice* change the path the Deployer if you're not using the _default_ Integration Server instance.
 
 
-### Build/CI Environment 
-* On your build server set-up the default java on PATH to be the JDK that comes with your webMethods installation ${SAG_HOME}/jvm/jvm/bin/java
-
-* On your build server install Jenkins CI Server and run it with the same user that run your webMethods processes. The CI can work also with other CI server, but for the reference implementation  we've chosen Jenkins.
-
-* In Jenkins->Manage Jenkins->Configure System->EnvironmentVariables define the following environment variables:
-1. SAG_CI_HOME = path_to_th_sagdevops-ci-assets on the local file system.
-2. SAG_HOME = path_to_your_local_webmethods_installation
-
-Use slash "/" as path separator. Example: "C:/SoftwareAG", instead of "C:\SoftwareAG".
-
-
 
 ### Jenkins Pipeline Job
 In Jenkins, create a new item from type pipeline. Give it a **unique name** as we use the job name as identifier further down the process. Scroll down the page to the pipeline definition
